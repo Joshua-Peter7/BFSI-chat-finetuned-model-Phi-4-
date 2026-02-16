@@ -1,237 +1,136 @@
-BFSI Conversational AI Assistant (Local, Compliant, Tiered)
+# BFSI Chat Finetuned Model (Phi-4)
 
-A privacy-first, local-only, BFSI-compliant conversational AI system designed to handle common Banking, Financial Services, and Insurance (BFSI) customer queries with deterministic responses, strict guardrails, and minimal hallucination risk.
+A specialized conversational AI model for the Banking, Financial Services, and Insurance (BFSI) sector, fine-tuned on the Phi-4 architecture. This repository contains all resources needed to deploy, test, and further fine-tune the model for industry-specific applications such as customer support, query resolution, and domain knowledge retrieval.
 
-This system is built for call-center automation, kiosks, and internal support tools, prioritizing safety, explainability, and control over raw generative creativity.
+---
 
-🚀 Key Objectives
+## Introduction
 
-Handle common BFSI queries (loans, EMI, policies, payments, accounts)
+The BFSI Chat Finetuned Model (Phi-4) is designed to deliver intelligent, context-aware conversations tailored for the unique needs of financial institutions. Leveraging advanced transfer learning and domain-specific datasets, this repository provides a robust foundation for building chatbots, virtual assistants, and automated agents capable of handling complex BFSI queries. The model can be integrated into web applications, contact centers, or internal tools to improve client engagement and operational efficiency.
 
-Operate fully locally using a Small Language Model (SLM)
+---
 
-Enforce strict safety & compliance guardrails
+## Requirements
 
-Prefer dataset-driven answers over free generation
+Before installing or running the model, ensure your environment meets the following requirements:
 
-Escalate responsibly when confidence is low
+- **Python 3.8 or higher**: The main scripts and dependencies require at least Python 3.8.
+- **PyTorch 1.12+**: The model leverages PyTorch for neural network operations and GPU acceleration.
+- **Transformers (Hugging Face)**: Essential for model loading, inference, and tokenizer handling.
+- **CUDA** (optional): For GPU-accelerated inference, CUDA toolkit 11.0+ is recommended.
+- **Additional Packages**:
+  - `sentencepiece`
+  - `scikit-learn`
+  - `pandas`
+  - `numpy`
+  - `tqdm`
+- **Hardware Recommendations**:
+  - At least 8GB RAM (16GB+ preferred for large batch inference or fine-tuning)
+  - GPU (NVIDIA Tesla/RTX or higher for best performance)
+- **Operating System**:
+  - Linux (Ubuntu 20.04+ recommended)
+  - macOS (tested on Monterey+)
+  - Windows 10/11 (WSL2 recommended for Linux compatibility)
 
-🏦 Supported Query Categories
+---
 
-Loan eligibility & application requirements
+## Installation
 
-EMI details & repayment schedules
+Follow these steps to set up the repository and prepare the model for use:
 
-Interest rate & policy information (non-numerical)
+### 1. Clone the Repository
 
-Payment & transaction queries
+```bash
+git clone https://github.com/Joshua-Peter7/BFSI-chat-finetuned-model-Phi-4-.git
+cd BFSI-chat-finetuned-model-Phi-4-
+```
 
-Basic account & customer support requests
+### 2. Set Up a Python Environment
 
-⚠️ The system never guesses interest rates, eligibility outcomes, or personalized financial data.
+It's advisable to use a virtual environment to manage dependencies.
 
-🧠 High-Level Architecture
-User (Text UI / Optional Voice)
-        ↓
-Privacy-First Preprocessing
-(PII masking, normalization, context extraction)
-        ↓
-Intent & Similarity Engine
-(BGE-M3 Embeddings + Qdrant)
-        ↓
-Decision Router
-(Confidence scoring + Guardrails)
-        ↓
-┌───────────────┬────────────────┬──────────────────┐
-│ Tier 1        │ Tier 2          │ Tier 3           │
-│ Dataset KB    │ Fine-tuned SLM  │ RAG / Escalation │
-│ (Primary)     │ (PHI-4 + LoRA)  │ (LightRAG)       │
-└───────────────┴────────────────┴──────────────────┘
-        ↓
-Safety & Compliance Filter
-(Llama Guard 3)
-        ↓
-Response Formatter
-(Pydantic-based, deterministic)
-        ↓
-Audit Logging
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-🧩 Three-Tier Response Strategy
-Tier 1 — Dataset Knowledge Base (Primary)
+### 3. Install Dependencies
 
-Uses BGE-M3 embeddings + Qdrant
+Install the required Python packages using pip:
 
-Returns exact, pre-approved responses
+```bash
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118  # For CUDA-enabled GPUs
+pip install -r requirements.txt  # If requirements.txt is provided
+# OR install manually
+pip install transformers sentencepiece scikit-learn pandas numpy tqdm
+```
 
-No text generation
+### 4. Download Model Weights
 
-Fastest and safest path
+- If model weights are provided in the repository, ensure they are placed in the appropriate directory (e.g., `./model/`).
+- If weights are hosted externally (such as Hugging Face Hub or another storage provider), use the provided scripts or instructions to download.
 
-Tier 2 — Fine-Tuned SLM (PHI-4)
+Example using Hugging Face:
 
-LoRA-fine-tuned PHI-4
+```bash
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-Deterministic decoding (temperature = 0)
+tokenizer = AutoTokenizer.from_pretrained("Joshua-Peter7/BFSI-chat-finetuned-model-Phi-4-")
+model = AutoModelForCausalLM.from_pretrained("Joshua-Peter7/BFSI-chat-finetuned-model-Phi-4-")
+```
 
-Used only when Tier-1 confidence is insufficient
+### 5. Running the Model
 
-Refuses guessing and unsafe outputs
+You can interact with the model using a sample script or via a command line interface.
 
-Tier 3 — RAG / Escalation
+```bash
+python chat_inference.py --input "How can I open a savings account?"
+```
 
-Used for complex policy explanations or low confidence cases
+Or, if using a notebook:
 
-Retrieves from structured policy documents only
+```python
+prompt = "What is the process for a home loan application?"
+inputs = tokenizer(prompt, return_tensors="pt")
+output = model.generate(**inputs, max_new_tokens=128)
+response = tokenizer.decode(output[0], skip_special_tokens=True)
+print(response)
+```
 
-Human escalation when required
+---
 
-🔐 Safety & Compliance Design
+## Example Architecture Flow
 
-This system is designed with BFSI compliance as a first-class requirement.
+Below is a simplified architecture of the typical data flow for deploying the BFSI chat model in a production scenario:
 
-Built-in Guardrails
+```mermaid
+flowchart TD
+    Client[User Interface - Web/Mobile] --> API[Backend API Layer]
+    API --> ModelLoader[Model Loader]
+    ModelLoader --> Phi4Model[Phi-4 Finetuned Model]
+    Phi4Model --> ModelLoader
+    ModelLoader --> API
+    API --> Client
+```
 
-PII detection & masking before any model invocation
+---
 
-No hallucinated numbers (interest rates, eligibility, limits)
+## Additional Notes
 
-No personalized financial decisions
+- For fine-tuning the model on custom BFSI datasets, refer to the `finetune.py` script and ensure your dataset is properly formatted.
+- For API deployment, consider using FastAPI or Flask with asynchronous inference for scalability.
+- Always keep your dependencies updated and ensure GPU drivers (if used) are compatible with your PyTorch installation.
 
-Llama Guard 3 for input & output safety checks
+---
 
-Audit logs for every interaction
+## Support
 
-🗂️ Project Structure (Simplified View)
-bfsi-conversational-ai/
-├── src/
-│   ├── api/            # FastAPI endpoints
-│   ├── core/           # Core logic (preprocessing, routing, tiers)
-│   ├── models/         # Model wrappers (PHI-4, BGE-M3, Llama Guard)
-│   ├── data/           # Dataset loaders, vector store
-│   ├── safety/         # Compliance & guardrails
-│   └── audit/          # Audit logging
-│
-├── data/
-│   ├── raw/            # Alpaca BFSI dataset
-│   ├── models/         # Fine-tuned model artifacts
-│   └── cache/          # Embedding cache
-│
-├── scripts/
-│   ├── training/       # PHI-4 fine-tuning
-│   ├── data/           # Embedding generation & Qdrant import
-│   └── setup/          # Environment setup scripts
-│
-├── tests/              # Unit & integration tests
-└── docs/               # Architecture & compliance docs
+For questions, issues, or feature requests, please open an issue in the repository or contact the maintainer directly via GitHub.
 
-📊 Dataset Strategy
+---
 
-Alpaca format: instruction, input, output
+## License
 
-Minimum 150+ curated BFSI samples
+Refer to the `LICENSE` file in the repository for detailed licensing information. Ensure compliance before using in commercial products.
 
-Professional, neutral, compliant tone
-
-Used for:
-
-Tier-1 deterministic responses
-
-Tier-2 behavioral fine-tuning (not fact memorization)
-
-🧪 Testing Philosophy
-
-This project does not test “model intelligence.”
-
-Instead, it tests:
-
-Privacy enforcement (PII masking)
-
-Routing correctness (Tier-1 / Tier-2 / Tier-3)
-
-Determinism of responses
-
-Safety & compliance behavior
-
-This reflects real BFSI review expectations.
-
-⚙️ Local Setup (Prototype)
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Start API
-uvicorn src.api.main:app --reload
-
-
-⚠️ Fine-tuning PHI-4 requires a CUDA-enabled GPU.
-Training is recommended on a separate machine (Colab / Linux GPU) and adapters copied locally.
-
-🧠 Why This Project Matters
-
-Most conversational AI systems:
-
-Prioritize creativity
-
-Hallucinate confidently
-
-Fail silently in regulated domains
-
-This project:
-
-Prioritizes control over creativity
-
-Treats AI as a decision-support component
-
-Is designed for real BFSI constraints, not demos
-
-⚠️ Disclaimer
-
-This project is for research and prototyping purposes only.
-It does not provide financial advice and should not be deployed in production without formal compliance review.
-
-COMMANDS TO RUN THIS PROJECT
-
-vidia-smi
-python -m venv phi4-env
-phi4-env\Scripts\activate
-
-
-installation of Fine tuning process
-
-pip install --upgrade pip
-pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
-pip install transformers==4.57.6 accelerate>=0.34,<1.0 datasets>=3.4,<4.4 trl>=0.18,<0.25 peft>=0.18,<1.0 sentencepiece safetensors
-pip install unsloth==2026.2.1 unsloth_zoo==2026.2.1
-pip install bitsandbytes==0.49.1 xformers==0.0.34 triton-windows==3.6.0.post25
-
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip install datasets transformers accelerate trl peft
-
-python -c "import torch; print(torch.cuda.is_available())"
-python -c "import unsloth; print('Unsloth OK')"
-
-python tests/unit/preprocessing/test_privacy_filter.py
-
-python examples/test_preprocessing.py
-
-python -c "from src.core.preprocessing import Preprocessor; p = Preprocessor(); r = p.preprocess('Call 9876543210', 'test'); print(f'✅ Works! Sanitized: {r.sanitized_text}')"
-
-pip install transformers==4.36.0 sentence-transformers==2.2.2 torch==2.1.0 qdrant-client==1.7.0 numpy==1.24.3 scikit-learn==1.3.2
-
-python scripts/setup/setup_intent_engine.py
-python tests/unit/intent_engine/test_intent_classifier.py
-python tests/unit/intent_engine/test_embedding_service.py
-python examples/test_intent_engine.py
-
-
-
-python tests/unit/router/test_guardrails.py
-python tests/unit/router/test_tier_router.py
-python examples/test_router.py
-python examples/test_full_pipeline.py
-python scripts/training/prepare_training_data.py
-python scripts/training/finetune_phi4.py
-py src/api/main.py
+---
