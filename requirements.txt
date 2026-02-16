@@ -1,0 +1,29 @@
+# Base (CPU-friendly) dependencies
+python-dotenv==1.0.0
+pyyaml==6.0.1
+pydantic==2.5.0
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Intent & Similarity Engine
+transformers==4.36.0
+sentence-transformers==2.2.2
+torch==2.1.0
+qdrant-client==1.7.0
+numpy==1.26.4
+scikit-learn==1.3.2
+
+# RAG utilities
+langchain==0.1.0
+langchain-community==0.0.13
+pypdf==3.17.4
+python-docx==1.1.0
+faiss-cpu==1.7.4
+tiktoken==0.5.2
+
+# Safety, Orchestrator, API
+fastapi==0.108.0
+uvicorn[standard]==0.25.0
+python-multipart==0.0.6
+jinja2==3.1.2

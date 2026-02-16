@@ -1,0 +1,52 @@
+training:
+  # Model Configuration
+  model:
+    base_model: "unsloth/Phi-3-mini-4k-instruct"
+    max_seq_length: 2048
+    load_in_4bit: true
+    
+  # LoRA Configuration
+  lora:
+    r: 16  # LoRA rank
+    lora_alpha: 16  # LoRA alpha
+    lora_dropout: 0.05
+    target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+      - gate_proj
+      - up_proj
+      - down_proj
+    bias: "none"
+    use_gradient_checkpointing: true
+    random_state: 3407
+    use_rslora: false
+    
+  # Training Arguments
+  training_args:
+    output_dir: "./training_output"
+    per_device_train_batch_size: 2
+    gradient_accumulation_steps: 4
+    warmup_steps: 5
+    max_steps: 60  # Adjust based on dataset size
+    learning_rate: 2.0e-4
+    fp16: false
+    bf16: false
+    logging_steps: 1
+    optim: "adamw_8bit"
+    weight_decay: 0.01
+    lr_scheduler_type: "linear"
+    seed: 3407
+    
+  # Dataset
+  dataset:
+    train_split: 0.9
+    eval_split: 0.1
+    
+  # Save Configuration
+  save:
+    save_method: "lora"  # lora or merged
+    # Must match tiers_config tier2.model.lora_path (directory containing adapter_config.json)
+    save_directory: "./data/models/phi4/lora_adapters/v1.0/phi4_lora_adapters"
+    push_to_hub: false

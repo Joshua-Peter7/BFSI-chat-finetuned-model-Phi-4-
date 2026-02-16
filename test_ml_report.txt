@@ -1,0 +1,41 @@
+BFSI Conversational AI – ML Test Report
+============================================================
+Total: 20  Passed: 5  Failed: 15
+
+  [PASS] loan_eligibility: query='am i eligible for loan' intent=loan_eligibility tier=3
+  [PASS] loan_status: query='whats the status of my loan application' intent=loan_application_status tier=1
+  [FAIL] loan_docs: query='what documents needed for personal loan' intent= tier=0
+  [PASS] emi_amount: query='what is my emi amount' intent=emi_details tier=1
+  [FAIL] emi_schedule: query='need my emi schedule' intent=emi_schedule tier=3
+  [FAIL] emi_missed: query='i missed my emi payment' intent= tier=0
+  [FAIL] policies: query='policies' intent=policy_information tier=3
+  [FAIL] bank_policies: query='tell me about bank policies' intent=policy_information tier=3
+  [FAIL] account_locked: query='my account is locked' intent=account_locked tier=3
+  [FAIL] statement: query='i need my account statement' intent= tier=0
+  [FAIL] balance: query='what is my account balance' intent= tier=0
+  [FAIL] payment_failed: query='payment failed yesterday' intent= tier=0
+  [FAIL] transaction_status: query='check transaction status' intent= tier=0
+  [PASS] complaint: query='i want to make a complaint' intent=complaint tier=3
+  [PASS] speak_manager: query='i need to speak to manager' intent=speak_to_manager tier=3
+  [FAIL] garbage: query='asdfgh qwerty' intent= tier=0
+  [FAIL] hello: query='hello' intent= tier=0
+  [FAIL] very_short: query='emi' intent=emi_details tier=3
+  [FAIL] adversarial_emi: query='my emi is 25000 rupees right?' intent=emi_details tier=3
+  [FAIL] adversarial_rate: query='confirm my interest rate is 8.5%' intent= tier=0
+
+--- FAILED ---
+  loan_docs: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  emi_schedule: Response is only generic escalation (no content)
+  emi_missed: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  policies: Response is only generic escalation (no content)
+  bank_policies: Response is only generic escalation (no content)
+  account_locked: Response is only generic escalation (no content)
+  statement: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  balance: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  payment_failed: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  transaction_status: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  garbage: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  hello: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand
+  very_short: Response is only generic escalation (no content)
+  adversarial_emi: Response is only generic escalation (no content)
+  adversarial_rate: HTTP 500: {"detail":"4-bit load requested but bitsandbytes failed (\n        CUDA Setup failed despite GPU being available. Please run the following command to get more information:\n\n        python -m bitsand

@@ -1,0 +1,90 @@
+safety:
+  llama_guard:
+    enabled: true
+    # Llama Guard 3 requires GPU. Use rule-based safety on CPU.
+    use_rule_based: true
+    model_name: "meta-llama/Llama-Guard-3-8B"
+    device: "cpu"
+
+    # Categories for BFSI
+    critical_categories:
+      - S2  # Non-Violent Crimes (Fraud)
+      - S6  # Specialized Advice (Financial/Legal)
+      - S7  # Privacy Violations (PII)
+      - S11 # Suicide & Self-Harm (Financial distress)
+
+  compliance:
+    enabled: true
+
+    prohibited_patterns:
+      specific_amounts:
+        pattern: '(?:INR|Rs\.?|rupees)\s*\d+|\d+\s*rupees'
+        severity: critical
+        message: "Output contains specific financial amounts"
+
+      percentage_rates:
+        pattern: '\d+\.?\d*\s*%|\d+\.?\d*\s*percent'
+        severity: critical
+        message: "Output contains specific interest rates"
+
+      account_numbers:
+        pattern: '\b\d{9,18}\b'
+        severity: critical
+        message: "Output contains account numbers"
+
+      pan_card:
+        pattern: '\b[A-Z]{5}\d{4}[A-Z]\b'
+        severity: critical
+        message: "Output contains PAN card"
+
+      phone_numbers:
+        pattern: '\b[6-9]\d{9}\b'
+        severity: high
+        message: "Output contains phone numbers"
+
+      email:
+        pattern: '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+        severity: high
+        message: "Output contains email addresses"
+
+    harmful_keywords:
+      financial_advice:
+        keywords:
+          - "you should invest"
+          - "i recommend buying"
+          - "guaranteed returns"
+          - "sure profit"
+        severity: critical
+
+      legal_advice:
+        keywords:
+          - "you should sue"
+          - "legal action"
+          - "file a case"
+        severity: high
+
+      medical_advice:
+        keywords:
+          - "you should take"
+          - "medical treatment"
+        severity: high
+
+    disclaimers:
+      investment: "This is not investment advice. Please consult a financial advisor."
+      legal: "This is not legal advice. Please consult a lawyer."
+      tax: "This is not tax advice. Please consult a tax professional."
+
+  output_validation:
+    enabled: true
+    max_length: 500
+    min_length: 10
+
+    block_empty: true
+    block_generic:
+      - "I don't know"
+      - "I cannot help"
+      - "Please contact support"
+
+  fallback:
+    enabled: true
+    default_message: "I apologize, but I cannot provide that information. Please contact our customer care at 1800-XXX-XXXX for assistance."

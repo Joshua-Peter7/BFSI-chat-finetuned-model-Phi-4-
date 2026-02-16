@@ -1,0 +1,46 @@
+tiers:
+  # Tier 1: Dataset KB (Primary)
+  tier1:
+    enabled: true
+    name: "Dataset Knowledge Base"
+    search_method: "exact_match"
+    confidence_boost: 0.05
+    max_response_length: 500
+
+  # Tier 2: Fine-tuned PHI-4
+  tier2:
+    enabled: true
+    name: "Fine-tuned PHI-4"
+
+    model:
+      base_model: "unsloth/Phi-3-mini-4k-instruct"  # Using PHI-3 mini for efficiency
+      model_path: "./data/models/phi4/base"
+      lora_path: "./data/models/phi4/lora_adapters/v1.0/phi4_lora_adapters"
+      cpu_fallback_model: ""
+      force_adapter_on_cpu: false
+      device: "cuda"  # Change to "cuda" if GPU available
+      load_in_4bit: false
+      use_flash_attention: false  # Set true if GPU supports it
+
+    generation:
+      max_new_tokens: 256
+      temperature: 0.0
+      top_p: 1.0
+      do_sample: false
+      repetition_penalty: 1.05
+
+    # Short BFSI rule (inference prepends this as context; training used instruction-only)
+    system_prompt: |
+      BFSI assistant. Do not give specific amounts, rates, or balances. Redirect to app or customer care for account details. Keep under 3 sentences.
+
+  # Tier 3: Escalation
+  tier3:
+    enabled: true
+    name: "Escalation"
+
+    rag:
+      enabled: true
+
+    escalation_message: |
+      I understand your concern. Let me connect you with a specialist who can better assist you.
+      A customer care representative will contact you shortly. You can also call our helpline at 1800-XXX-XXXX.

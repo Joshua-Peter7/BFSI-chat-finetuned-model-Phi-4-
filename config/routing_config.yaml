@@ -1,0 +1,76 @@
+routing:
+  # Tier selection strategy
+  strategy: "confidence_based"  # confidence_based, rule_based, hybrid
+  
+  # Confidence thresholds for tier routing
+  thresholds:
+    tier1:
+      min_confidence: 0.72  # High confidence for Tier 1 (lowered so more KB hits)
+      min_similarity: 0.78   # Minimum similarity score for KB match
+      
+    tier2:
+      min_confidence: 0.50  # Medium confidence for Tier 2
+      max_confidence: 0.90  # Upper bound (below Tier 1)
+      
+    tier3:
+      min_confidence: 0.00  # Tier 3 accepts low confidence
+      escalation_threshold: 0.30  # Below this, escalate to human
+  
+  # Intent-specific routing rules
+  intent_rules:
+    # Always route to Tier 1 (high-confidence KB)
+    tier1_intents:
+      - emi_details
+      - loan_application_status
+      - account_statement
+      - policy_information
+    
+    # Prefer Tier 2 (fine-tuned SLM)
+    tier2_intents:
+      - emi_missed
+      - payment_failure
+      - account_locked
+      - update_mobile
+    
+    # Always escalate to Tier 3
+    tier3_intents:
+      - complaint
+      - speak_to_manager
+      - not_satisfied
+      - escalation
+  
+  # Guardrails
+  guardrails:
+    enabled: true
+    
+    # Block if critical PII detected in input
+    block_on_pii: true
+    critical_pii_types:
+      - pan_card
+      - aadhaar
+      - account_number
+      - credit_card
+    
+    # Block suspected attacks
+    block_on_injection: true
+    
+    # Rate limiting
+    rate_limit:
+      enabled: true
+      max_requests_per_session: 10
+      window_seconds: 60
+  
+  # Fallback behavior
+  fallback:
+    enabled: true
+    max_retries: 2
+    retry_delay_ms: 100
+    
+    # Fallback chain: Tier 1 → Tier 2 → Tier 3
+    chain:
+      - from_tier: 1
+        to_tier: 2
+        condition: "low_confidence"
+      - from_tier: 2
+        to_tier: 3
+        condition: "low_confidence"

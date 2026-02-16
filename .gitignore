@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Data
+data/processed/
+data/models/
+data/cache/
+data/raw_private/
+data/pii/
+
+# Secrets
+.env
+secrets/
+credentials/
+config/*.secret.yaml
+config/*.local.yaml
+*.key
+*.pem
+*.crt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Jupyter
+.ipynb_checkpoints/

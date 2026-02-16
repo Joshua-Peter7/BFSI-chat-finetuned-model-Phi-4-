@@ -1,0 +1,71 @@
+intent_engine:
+  # BGE-M3 Embedding Model
+  embedding:
+    model_name: "BAAI/bge-m3"
+    model_path: "./data/models/bge-m3"
+    embedding_dim: 1024
+    force_fallback: false
+    max_length: 512
+    device: "cpu"  # Change to "cuda" if GPU available
+    batch_size: 32
+    normalize: true
+    cache_enabled: true
+    cache_size: 10000
+  
+  # Qdrant Vector Database
+  qdrant:
+    host: "localhost"
+    port: 6333
+    collection_name: "bfsi_intents"
+    vector_size: 1024
+    distance: "Cosine"
+    use_memory: true  # In-memory mode for development
+  
+  # Intent Classification
+  intent_classification:
+    confidence_threshold: 0.70
+    top_k_intents: 3
+    
+    # Intent categories for BFSI
+    intent_categories:
+      loan:
+        - loan_eligibility
+        - loan_application_status
+        - loan_documents
+      
+      emi:
+        - emi_details
+        - emi_schedule
+        - emi_missed
+        - emi_bounced
+      
+      payment:
+        - payment_failure
+        - transaction_status
+        - payment_methods
+      
+      account:
+        - account_locked
+        - account_statement
+        - account_balance
+      
+      profile:
+        - update_mobile
+        - update_address
+        - update_email
+      
+      insurance:
+        - policy_information
+        - premium_payment
+        - claim_status
+      
+      escalation:
+        - complaint
+        - speak_to_manager
+        - not_satisfied
+  
+  # Similarity Search
+  similarity_search:
+    top_k: 10
+    score_threshold: 0.50
+    use_hybrid: false  

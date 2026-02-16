@@ -1,0 +1,682 @@
+[
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "am i eligible for loan",
+    "output": "To check your loan eligibility, please log in to our mobile app or internet banking portal. You can also visit the nearest branch or contact our customer care for detailed eligibility criteria based on your profile."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "what documents needed for personal loan",
+    "output": "For personal loan documentation requirements, please refer to our official website or mobile app. You may also contact our customer care team who can guide you through the complete list of required documents."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "can i apply for home loan",
+    "output": "Loan eligibility depends on multiple factors including income, credit score, and existing obligations. Please use the eligibility calculator on our website or app, or contact our customer care for a detailed assessment."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "minimum salary requirement for loan",
+    "output": "Loan eligibility criteria including income requirements are available on our official website and mobile app. Please contact our customer care or visit the nearest branch for personalized eligibility assessment."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "credit score needed for loan approval",
+    "output": "Credit score requirements vary by loan type. Please check our website or mobile app for general guidelines, or contact our customer care team for specific eligibility criteria based on your requirements."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "whats the status of my loan application",
+    "output": "Please check your loan application status by logging into our mobile app or internet banking. You can also contact our customer care with your application reference number for assistance."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "applied for loan last week any update",
+    "output": "To track your loan application status, please log in to our app or internet banking portal using your credentials. Alternatively, you may reach out to our customer care team with your application reference number."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "loan approved or rejected",
+    "output": "Please check your loan application status through our mobile app or internet banking. For further assistance, contact our customer care with your application reference number."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "how long does loan approval take",
+    "output": "Loan processing time varies based on loan type and documentation completeness. Please check your application status on our mobile app or internet banking, or contact customer care for specific timeline information."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "when will i get loan amount",
+    "output": "Loan disbursement timelines depend on application approval and documentation verification. Please check your application status through our app or internet banking, or contact customer care for updates."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "what is my emi amount",
+    "output": "For your EMI details, please log in to our mobile app or internet banking portal. You can view your complete EMI schedule and payment information there. Alternatively, contact our customer care for assistance."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "when is next emi due",
+    "output": "Your EMI due date and amount can be viewed on our mobile app or internet banking portal. Please log in to access your loan account details or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "how much is my monthly payment",
+    "output": "To view your monthly EMI amount, please check our mobile app or internet banking portal. You may also contact our customer care team for detailed EMI information related to your loan account."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "emi date and amount",
+    "output": "Your EMI date and amount details are available on our mobile app and internet banking portal. Please log in to view this information or contact our customer care team for assistance."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "where can i see my emi",
+    "output": "You can view your EMI details by logging into our mobile app or internet banking portal. Your loan account section will display all EMI-related information. You may also contact customer care for assistance."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "need my emi schedule",
+    "output": "Your complete EMI schedule is available on our mobile app and internet banking portal. Please log in to download or view your repayment schedule. You may also request it from our customer care team."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "how many emis remaining",
+    "output": "To check the number of remaining EMIs, please log in to our mobile app or internet banking. Your loan account will display the complete repayment schedule and outstanding details."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "when will loan be completed",
+    "output": "Your loan tenure and maturity details are available on our mobile app or internet banking portal. Please log in to view your complete EMI schedule or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "can i get repayment schedule",
+    "output": "Your repayment schedule can be downloaded from our mobile app or internet banking portal. Please log in and navigate to your loan account section, or contact customer care to request the schedule."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "show me all my future payments",
+    "output": "Your complete payment schedule is available on our mobile app and internet banking portal. Please log in to view all upcoming EMI details or contact customer care for assistance."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "my emi bounced what to do",
+    "output": "If your EMI has bounced, please ensure sufficient balance in your account and contact our customer care immediately. You can also visit the nearest branch to resolve this and avoid any penalties."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "missed last payment what happens now",
+    "output": "Please contact our customer care team immediately to address the missed payment. You can also visit our nearest branch or use our app to make the payment and understand any applicable charges."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "payment failed due to low balance",
+    "output": "Please ensure adequate balance in your linked account and retry the payment through our app or internet banking. Contact our customer care team for guidance on completing the payment and understanding any implications."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "emi not deducted this month",
+    "output": "If your EMI was not deducted, please check your account balance and payment status on our app or internet banking. Contact customer care immediately to ensure timely payment and avoid penalties."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "what is penalty for late payment",
+    "output": "Late payment charges vary by loan type and are mentioned in your loan agreement. Please refer to your loan documents or contact our customer care team for specific information about applicable penalties."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "what is interest rate on my loan",
+    "output": "Your loan interest rate details are available on our mobile app, internet banking, and your loan agreement document. Please refer to these sources or contact our customer care for specific rate information."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "current loan rates",
+    "output": "Current interest rates are available on our official website and mobile app. For personalized rate information based on your profile, please contact our customer care or visit the nearest branch."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "can my interest rate be reduced",
+    "output": "For inquiries regarding interest rate revision or reduction, please contact our customer care team or visit the nearest branch. Rate adjustments depend on various factors and bank policies."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "is my loan fixed or floating rate",
+    "output": "Your loan interest rate type is mentioned in your loan agreement document. You can also view this information on our mobile app or internet banking, or contact customer care for clarification."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "interest rates for home loan",
+    "output": "Current home loan interest rates are available on our official website and mobile app. For personalized rate quotes based on your eligibility, please contact our customer care or visit the nearest branch."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "payment not going through",
+    "output": "If you are facing payment issues, please ensure your account has sufficient balance and try again. If the problem persists, contact our customer care immediately or visit the nearest branch for assistance."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "transaction failed but money deducted",
+    "output": "If your transaction failed but amount was debited, please wait 5-7 working days for auto-reversal. If not reversed, contact our customer care with transaction details or visit the nearest branch."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "cant make payment through app",
+    "output": "If you are unable to make payment through our app, please try using internet banking or visit the nearest branch. You may also contact our customer care team for technical support."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "payment keeps getting declined",
+    "output": "If your payment is being declined, please check your account balance and payment limits. Contact our customer care or visit the nearest branch for detailed investigation and resolution."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "why is my payment rejected",
+    "output": "Payment rejections can occur due to various reasons including insufficient balance or technical issues. Please contact our customer care with transaction details for specific information and resolution."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "transaction is pending when will it complete",
+    "output": "Transaction processing times vary by type. Please check the status on our mobile app or internet banking. If pending for more than expected time, contact our customer care with transaction reference number."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "money not received yet",
+    "output": "Transaction settlements can take 1-3 working days depending on type. Please check transaction status on our app or internet banking. If delayed beyond expected time, contact customer care with details."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "payment done but not showing",
+    "output": "Transactions may take some time to reflect in your account. Please check after a few hours on our app or internet banking. If not updated, contact customer care with payment reference number."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "transfer status check",
+    "output": "You can check your transaction status by logging into our mobile app or internet banking portal. For further assistance, contact our customer care team with your transaction reference number."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "how long does transfer take",
+    "output": "Transfer processing time varies based on transfer type and destination. Please check our website or app for general timelines, or contact customer care with specific transaction details for accurate information."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "my account is locked why",
+    "output": "If your account is locked, please contact our customer care immediately or visit the nearest branch with valid identification. They will guide you through the unlocking process after verification."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "cannot access my account",
+    "output": "If you cannot access your account, please try resetting your credentials through our app or internet banking. If the issue persists, contact our customer care or visit the nearest branch for assistance."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "account suspended what to do",
+    "output": "For account suspension issues, please visit the nearest branch with your identification documents. You may also contact our customer care team for initial guidance on the matter."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "login not working",
+    "output": "If you are facing login issues, please try resetting your password through our app or website. If the problem continues, contact our customer care or visit the nearest branch for support."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "forgot my password",
+    "output": "You can reset your password using the forgot password option on our mobile app or internet banking login page. If you need assistance, contact our customer care team or visit the nearest branch."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "need statement for last 6 months",
+    "output": "You can download account statements directly from our mobile app or internet banking portal. Statements for various periods are available for download. You may also request them at our nearest branch."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "how to get bank statement",
+    "output": "Bank statements can be downloaded through our mobile app or internet banking. Log in to your account and navigate to the statements section. You can also request statements at any branch or via customer care."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "need stamped statement",
+    "output": "For stamped and signed bank statements, please visit the nearest branch with your identification documents. You can also download digital statements from our mobile app or internet banking portal."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "statement for visa application",
+    "output": "You can download official bank statements from our mobile app or internet banking portal. For stamped and signed statements, please visit the nearest branch with your requirements and identification."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "where can i download my statement",
+    "output": "You can download your account statement by logging into our mobile app or internet banking portal. Navigate to the account section and select the statement download option for your required period."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "want to change mobile number",
+    "output": "To update your mobile number, please visit the nearest branch with valid identification proof. You may also initiate the request through our mobile app or internet banking for certain verification-based updates."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "how to update address",
+    "output": "To update your address, please visit the nearest branch with address proof and identification documents. Some updates may also be initiated through our mobile app or internet banking portal."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "need to change email id",
+    "output": "For email address updates, please log in to our mobile app or internet banking and navigate to profile settings. Alternatively, visit the nearest branch with valid identification for assistance."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "update contact details",
+    "output": "You can update certain contact details through our mobile app or internet banking portal. For complete profile updates, please visit the nearest branch with valid identification and supporting documents."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "change registered phone number",
+    "output": "To change your registered phone number, please visit the nearest branch with valid identification documents. You may also check if the update can be initiated through our mobile app or internet banking."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "what are my policy details",
+    "output": "Your insurance policy details are available on our mobile app or internet banking portal. Please log in to view policy information or contact our customer care for assistance."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "need my policy number",
+    "output": "Your policy number is available in your policy document, mobile app, and internet banking portal. Please refer to these sources or contact our customer care team for this information."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "what is covered in my policy",
+    "output": "Your policy coverage details are mentioned in your policy document and are also available on our mobile app or internet banking. Please refer to these sources or contact customer care for clarification."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "policy maturity date",
+    "output": "Your policy maturity date is mentioned in your policy document and can also be viewed on our mobile app or internet banking portal. Please log in to check or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "how to check my insurance policy",
+    "output": "You can view your insurance policy details by logging into our mobile app or internet banking portal. Your complete policy information is available there. You may also contact customer care for assistance."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "how to pay insurance premium",
+    "output": "You can pay your insurance premium through our mobile app, internet banking, or at any branch. Multiple payment modes are available. Please log in to your account for payment options or contact customer care."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "when is premium due",
+    "output": "Your premium due date is available on your policy document, mobile app, and internet banking portal. Please check these sources or contact our customer care team for due date information."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "missed premium payment",
+    "output": "If you have missed a premium payment, please make the payment immediately to avoid policy lapse. Contact our customer care or visit the nearest branch to understand grace periods and revival options."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "premium amount for this month",
+    "output": "Your premium amount is mentioned in your policy document and can be viewed on our mobile app or internet banking portal. Please log in to check or contact customer care for this information."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "can i pay premium online",
+    "output": "Yes, you can pay your insurance premium online through our mobile app or internet banking portal. Multiple payment options are available. Please log in to your account to complete the payment."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "what is my claim status",
+    "output": "To check your insurance claim status, please log in to our mobile app or internet banking portal. You can also contact our customer care team with your claim reference number for updates."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "when will claim be processed",
+    "output": "Claim processing times vary based on claim type and documentation completeness. Please check claim status on our mobile app or internet banking, or contact customer care with your claim reference number for updates."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "claim approved or not",
+    "output": "Please check your claim status by logging into our mobile app or internet banking portal. You can also contact our customer care team with your claim reference number for detailed status information."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "submitted claim documents when will i get update",
+    "output": "After document submission, claim processing takes time based on verification requirements. Please check status on our mobile app or internet banking, or contact customer care with your claim reference number for updates."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "claim settlement status",
+    "output": "You can check your claim settlement status by logging into our mobile app or internet banking portal. For detailed updates, please contact our customer care team with your claim reference number."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "not satisfied with response want to escalate",
+    "output": "If you wish to escalate your concern, please contact our senior customer care team or request to speak with a supervisor. You can also visit the nearest branch or email our grievance redressal team for escalation."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "need to speak to manager",
+    "output": "To speak with a manager or escalate your concern, please contact our customer care and request escalation. You can also visit the nearest branch or use our official grievance channels for priority resolution."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "complaint not resolved",
+    "output": "If your complaint is not resolved, please escalate it through our official grievance channels. You can contact senior customer care, visit the nearest branch, or use our escalation email provided on our website."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "how to file complaint",
+    "output": "You can file a complaint through our mobile app, internet banking, customer care, or by visiting the nearest branch. Our grievance redressal contact details are also available on our official website."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "where to raise grievance",
+    "output": "Grievances can be raised through our mobile app, internet banking portal, customer care, or at any branch. Our official website also provides detailed grievance redressal contact information and escalation matrix."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "do i qualify for car loan",
+    "output": "To check your loan eligibility, please log in to our mobile app or internet banking portal. You can also visit the nearest branch or contact our customer care for detailed eligibility criteria based on your profile."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "loan eligibility check",
+    "output": "Loan eligibility depends on multiple factors including income, credit score, and existing obligations. Please use the eligibility calculator on our website or app, or contact our customer care for a detailed assessment."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "requirements for business loan",
+    "output": "For business loan documentation requirements and eligibility criteria, please refer to our official website or mobile app. You may also contact our customer care team or visit the nearest branch for detailed guidance."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "application under process or approved",
+    "output": "Please check your loan application status by logging into our mobile app or internet banking. You can also contact our customer care with your application reference number for assistance."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "need update on my application",
+    "output": "To track your loan application status, please log in to our app or internet banking portal using your credentials. Alternatively, you may reach out to our customer care team with your application reference number."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "check emi details",
+    "output": "For your EMI details, please log in to our mobile app or internet banking portal. You can view your complete EMI schedule and payment information there. Alternatively, contact our customer care for assistance."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "what is emi payment date",
+    "output": "Your EMI due date and amount can be viewed on our mobile app or internet banking portal. Please log in to access your loan account details or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "total emis left in my loan",
+    "output": "To check the number of remaining EMIs, please log in to our mobile app or internet banking. Your loan account will display the complete repayment schedule and outstanding details."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "full repayment schedule needed",
+    "output": "Your complete EMI schedule is available on our mobile app and internet banking portal. Please log in to download or view your repayment schedule. You may also request it from our customer care team."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "emi payment failed",
+    "output": "If your EMI has bounced, please ensure sufficient balance in your account and contact our customer care immediately. You can also visit the nearest branch to resolve this and avoid any penalties."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "what if i miss emi payment",
+    "output": "Please contact our customer care team immediately to address the missed payment. You can also visit our nearest branch or use our app to make the payment and understand any applicable charges."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "check my loan interest rate",
+    "output": "Your loan interest rate details are available on our mobile app, internet banking, and your loan agreement document. Please refer to these sources or contact our customer care for specific rate information."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "interest rate for personal loan",
+    "output": "Current interest rates are available on our official website and mobile app. For personalized rate information based on your profile, please contact our customer care or visit the nearest branch."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "unable to complete payment",
+    "output": "If you are facing payment issues, please ensure your account has sufficient balance and try again. If the problem persists, contact our customer care immediately or visit the nearest branch for assistance."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "payment error message showing",
+    "output": "If you are unable to make payment through our app, please try using internet banking or visit the nearest branch. You may also contact our customer care team for technical support."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "payment status check",
+    "output": "You can check your transaction status by logging into our mobile app or internet banking portal. For further assistance, contact our customer care team with your transaction reference number."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "transaction not updated in account",
+    "output": "Transactions may take some time to reflect in your account. Please check after a few hours on our app or internet banking. If not updated, contact customer care with payment reference number."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "account access problem",
+    "output": "If you cannot access your account, please try resetting your credentials through our app or internet banking. If the issue persists, contact our customer care or visit the nearest branch for assistance."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "why is my account blocked",
+    "output": "If your account is locked, please contact our customer care immediately or visit the nearest branch with valid identification. They will guide you through the unlocking process after verification."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "download statement",
+    "output": "You can download account statements directly from our mobile app or internet banking portal. Statements for various periods are available for download. You may also request them at our nearest branch."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "need last 3 months statement",
+    "output": "Bank statements can be downloaded through our mobile app or internet banking. Log in to your account and navigate to the statements section. You can also request statements at any branch or via customer care."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "update my email address",
+    "output": "For email address updates, please log in to our mobile app or internet banking and navigate to profile settings. Alternatively, visit the nearest branch with valid identification for assistance."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "change my contact number",
+    "output": "To update your mobile number, please visit the nearest branch with valid identification proof. You may also initiate the request through our mobile app or internet banking for certain verification-based updates."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "check policy coverage",
+    "output": "Your policy coverage details are mentioned in your policy document and are also available on our mobile app or internet banking. Please refer to these sources or contact customer care for clarification."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "insurance policy details",
+    "output": "Your insurance policy details are available on our mobile app or internet banking portal. Please log in to view policy information or contact our customer care for assistance."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "premium payment due date",
+    "output": "Your premium due date is available on your policy document, mobile app, and internet banking portal. Please check these sources or contact our customer care team for due date information."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "how to pay policy premium",
+    "output": "You can pay your insurance premium through our mobile app, internet banking, or at any branch. Multiple payment modes are available. Please log in to your account for payment options or contact customer care."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "check my claim status",
+    "output": "To check your insurance claim status, please log in to our mobile app or internet banking portal. You can also contact our customer care team with your claim reference number for updates."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "claim processing time",
+    "output": "Claim processing times vary based on claim type and documentation completeness. Please check claim status on our mobile app or internet banking, or contact customer care with your claim reference number for updates."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "want to register complaint",
+    "output": "You can file a complaint through our mobile app, internet banking, customer care, or by visiting the nearest branch. Our grievance redressal contact details are also available on our official website."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "issue not resolved yet",
+    "output": "If your complaint is not resolved, please escalate it through our official grievance channels. You can contact senior customer care, visit the nearest branch, or use our escalation email provided on our website."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "loan for self employed",
+    "output": "Loan eligibility criteria for self-employed individuals are available on our official website and mobile app. Please contact our customer care or visit the nearest branch for detailed assessment and documentation requirements."
+  },
+  {
+    "instruction": "Provide information about loan eligibility criteria",
+    "input": "can i get loan without salary slip",
+    "output": "Documentation requirements vary by loan type. Please refer to our official website or mobile app for alternative documentation options. You may also contact our customer care team for guidance."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "why is application taking so long",
+    "output": "Loan processing time varies based on loan type and documentation completeness. Please check your application status on our mobile app or internet banking, or contact customer care for specific timeline information."
+  },
+  {
+    "instruction": "Check loan application status",
+    "input": "application rejected why",
+    "output": "Please check your loan application status through our mobile app or internet banking. For further assistance, contact our customer care with your application reference number."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "first emi date",
+    "output": "Your EMI due date and amount can be viewed on our mobile app or internet banking portal. Please log in to access your loan account details or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide EMI details",
+    "input": "emi account details",
+    "output": "For your EMI details, please log in to our mobile app or internet banking portal. You can view your complete EMI schedule and payment information there. Alternatively, contact our customer care for assistance."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "loan closure date",
+    "output": "Your loan tenure and maturity details are available on our mobile app or internet banking portal. Please log in to view your complete EMI schedule or contact customer care for this information."
+  },
+  {
+    "instruction": "Provide EMI schedule information",
+    "input": "remaining loan tenure",
+    "output": "To check the number of remaining EMIs, please log in to our mobile app or internet banking. Your loan account will display the complete repayment schedule and outstanding details."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "grace period for emi payment",
+    "output": "Late payment charges vary by loan type and are mentioned in your loan agreement. Please refer to your loan documents or contact our customer care team for specific information about applicable penalties."
+  },
+  {
+    "instruction": "Address missed or bounced EMI",
+    "input": "how to pay missed emi",
+    "output": "Please ensure adequate balance in your linked account and retry the payment through our app or internet banking. Contact our customer care team for guidance on completing the payment and understanding any implications."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "roi on education loan",
+    "output": "Current interest rates are available on our official website and mobile app. For personalized rate information based on your profile, please contact our customer care or visit the nearest branch."
+  },
+  {
+    "instruction": "Provide interest rate information",
+    "input": "compare loan interest rates",
+    "output": "Current interest rates for various loan products are available on our official website and mobile app. For personalized comparisons based on your eligibility, please contact our customer care or visit the nearest branch."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "payment gateway not working",
+    "output": "If you are unable to make payment through our app, please try using internet banking or visit the nearest branch. You may also contact our customer care team for technical support."
+  },
+  {
+    "instruction": "Address payment failure",
+    "input": "retry payment",
+    "output": "If you are facing payment issues, please ensure your account has sufficient balance and try again. If the problem persists, contact our customer care immediately or visit the nearest branch for assistance."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "refund status check",
+    "output": "Transaction settlements can take 1-3 working days depending on type. Please check transaction status on our app or internet banking. If delayed beyond expected time, contact customer care with details."
+  },
+  {
+    "instruction": "Check transaction status",
+    "input": "online transfer pending",
+    "output": "Transaction processing times vary by type. Please check the status on our mobile app or internet banking. If pending for more than expected time, contact our customer care with transaction reference number."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "debit card blocked",
+    "output": "If your account is locked, please contact our customer care immediately or visit the nearest branch with valid identification. They will guide you through the unlocking process after verification."
+  },
+  {
+    "instruction": "Address account issues",
+    "input": "cannot login to net banking",
+    "output": "If you are facing login issues, please try resetting your password through our app or website. If the problem continues, contact our customer care or visit the nearest branch for support."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "account summary required",
+    "output": "You can download account statements directly from our mobile app or internet banking portal. Statements for various periods are available for download. You may also request them at our nearest branch."
+  },
+  {
+    "instruction": "Provide account statement",
+    "input": "transaction history download",
+    "output": "Bank statements can be downloaded through our mobile app or internet banking. Log in to your account and navigate to the statements section. You can also request statements at any branch or via customer care."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "wrong address in records",
+    "output": "To update your address, please visit the nearest branch with address proof and identification documents. Some updates may also be initiated through our mobile app or internet banking portal."
+  },
+  {
+    "instruction": "Update profile or contact information",
+    "input": "update pan card details",
+    "output": "You can update certain contact details through our mobile app or internet banking portal. For complete profile updates, please visit the nearest branch with valid identification and supporting documents."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "nominee details in policy",
+    "output": "Your insurance policy details are available on our mobile app or internet banking portal. Please log in to view policy information or contact our customer care for assistance."
+  },
+  {
+    "instruction": "Provide insurance policy information",
+    "input": "sum assured amount",
+    "output": "Your policy coverage details are mentioned in your policy document and are also available on our mobile app or internet banking. Please refer to these sources or contact customer care for clarification."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "what happens if premium not paid",
+    "output": "If you have missed a premium payment, please make the payment immediately to avoid policy lapse. Contact our customer care or visit the nearest branch to understand grace periods and revival options."
+  },
+  {
+    "instruction": "Address insurance premium payment",
+    "input": "auto debit for premium",
+    "output": "You can pay your insurance premium through our mobile app, internet banking, or at any branch. Multiple payment modes are available. Please log in to your account for payment options or contact customer care."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "claim documents submitted",
+    "output": "After document submission, claim processing takes time based on verification requirements. Please check status on our mobile app or internet banking, or contact customer care with your claim reference number for updates."
+  },
+  {
+    "instruction": "Check insurance claim status",
+    "input": "when will claim amount be credited",
+    "output": "Claim processing times vary based on claim type and documentation completeness. Please check claim status on our mobile app or internet banking, or contact customer care with your claim reference number for updates."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "speak to senior officer",
+    "output": "To speak with a manager or escalate your concern, please contact our customer care and request escalation. You can also visit the nearest branch or use our official grievance channels for priority resolution."
+  },
+  {
+    "instruction": "Escalate to customer support",
+    "input": "escalation process",
+    "output": "Grievances can be raised through our mobile app, internet banking portal, customer care, or at any branch. Our official website also provides detailed grievance redressal contact information and escalation matrix."
+  }
+]
